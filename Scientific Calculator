@@ -1,0 +1,166 @@
+#include<stdio.h>
+#include<math.h>
+int a,b;
+void program();             //function Prototype
+int add(int a,int b);       //function Prototype
+int sub(int a,int b);       //function Prototype
+int mul(int a,int b);       //function Prototype
+float div(int a,int b);     //function Prototype
+float modulus(int a,int b); //function Prototype
+int power(int a,int b);     //function Prototype
+float squareroot(int a);    //function Prototype
+float cubeRoot(int a);      //function Prototype
+int main()
+{
+    int choice,P,Q,R,V;
+    float S,T,W,X;
+    program();
+    while(1)
+    {
+        printf("\nEnter your choice: ");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+        case 1:
+            P = add(a,b);       //function calling
+            printf("\nThe Summation of a and b is = %d\n",P);
+            break;
+        case 2:
+            Q = sub(a,b);       //function calling
+            printf("\nThe Subtraction of a and b is = %d\n",Q);
+            break;
+        case 3:
+            R = mul(a,b);       //function calling
+            printf("\nThe Multiplication of a and b is = %d\n",R);
+            break;
+        case 4:
+            S = div(a,b);       //function calling
+            printf("\nThe Division of a and b is = %f\n",S);
+            break;
+        case 5:
+            T = modulus(a,b);   //function calling
+            printf("\nThe Modulus of a and b is = %f\n",T);
+            break;
+        case 6:
+            V = power(a,b);     //function calling
+            printf("\nPower of a given number is = %d\n",V);
+            break;
+        case 7:
+            W = squareroot(a);  //function calling
+            printf("\nSquareRoot of a given number is = %f\n",W);
+            break;
+        case 8:
+            X = cubeRoot(a);    //function calling
+            printf("\nCubeRoot of a Given Number is = %f\n",X);
+            break;
+        default :
+            printf("\nInvalid Option\n");
+            printf("\nPlease Enter an available options\n\n");
+            program();
+        }
+    }
+
+    return 0;
+}
+void program()
+{
+
+    printf("==========================================\n\n\n");
+    printf(" 1. Addition of Two Numbers\n\n");
+    printf(" 2. Subtraction of Two Numbers\n\n");
+    printf(" 3. Multiplication of Two Numbers\n\n");
+    printf(" 4. Division of Two Numbers\n\n");
+    printf(" 5. Modulus of Two Numbers\n\n");
+    printf(" 6. Power of a Given Numbers\n\n");
+    printf(" 7. SquareRoot of a Given Numbers\n\n");
+    printf(" 8. CubeRoot of a Given Numbers\n\n\n");
+    printf("==========================================\n\n\n");
+}
+
+/*--Addition Function--*/
+
+int add(int a,int b)        //function definition
+{
+    int sum;
+    printf("\nEnter the value of a & b: ");
+    scanf("%d%d",&a,&b);
+    sum = a + b;
+    return sum;
+}
+
+/*--Subtraction Function--*/
+
+int sub(int a,int b)        //function definition
+{
+    int sub;
+    printf("\nEnter the value of a & b: ");
+    scanf("%d%d",&a,&b);
+    sub = a - b;
+    return sub;
+}
+
+/*--Multiplication Function--*/
+
+int mul(int a,int b)        //function definition
+{
+    int mul;
+    printf("\nEnter the value of a & b: ");
+    scanf("%d%d",&a,&b);
+    mul = a * b;
+    return mul;
+}
+
+/*--Division Function--*/
+
+float div(int a,int b)      //function definition
+{
+    float div;
+    printf("\nEnter the value of a & b: ");
+    scanf("%d%d",&a,&b);
+    div = (float)a/b;
+    return div;
+}
+
+/*--Modulus Function--*/
+
+float modulus(int a,int b)  //function definition
+{
+    float mod;
+    printf("\nEnter the value of a & b: ");
+    scanf("%d%d",&a,&b);
+    mod = a%b;
+    return mod;
+}
+
+/*--Power Function--*/
+
+int power(int a,int b)      //function definition
+{
+    int power;
+    printf("\nEnter the value of a & b: ");
+    scanf("%d\n%d",&a,&b);
+    power = pow(a,b);
+    return power;
+}
+
+/*--SquareRoot Function--*/
+
+float squareroot(int a)     //function definition
+{
+    float p;
+    printf("\nEnter the value of a: ");
+    scanf("%d",&a);
+    p = sqrt(a);
+    return p;
+}
+
+/*--CubeRoot Function--*/
+
+float cubeRoot(int a)       //function definition
+{
+    float p;
+    printf("\nEnter the value of a: ");
+    scanf("%d",&a);
+    p = cbrt(a);
+    return p;
+}
