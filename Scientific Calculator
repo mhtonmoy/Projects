@@ -71,7 +71,7 @@ int main()
         case 12:
             printf("\nEnter a number to find Factorial: ");
             scanf("%d",&a);
-            b = fact(a);        //function calling
+            b = factorial(a);        //function calling
             printf("\nFactorial of %d is = %d\n",a,b);
             break;
         default :
@@ -241,13 +241,13 @@ void primenumber()      //function definition
 
 /*--Factorial Function--*/
 
-int fact(int n)         //function definition
+int factorial(int n)         //function definition
 {
     int f;
 
     if(n == 1)
         return 1;
 
-    f = n * fact (n-1);
+    f = n * factorial(n-1);
         return f;
 }
