@@ -195,7 +195,7 @@ float farenheit()      //function definition
 {
     float f;
     printf("\nEnter the value of Celcius: ");
-    scanf("%f",&a);
+    scanf("%d",&a);
     f = ((a*9)/5)+32;
     return f;
 }
@@ -204,7 +204,7 @@ float farenheit()      //function definition
 
 float celcius()        //function definition
 {
-    float c;
+    float c,a;
     printf("\nEnter the value of Fareheit: ");
     scanf("%f",&a);
     c = ((a-32)*5)/9;
